@@ -23,6 +23,7 @@ acs_selected <- acs_selected [-c(1), ]
 acs_mutate <- acs_selected %>% 
   mutate(geo_id = str_replace(geo_id, "1400000US", ""))
 
+#export as CSV
 write.csv(acs_mutate, "povertycensus.csv", row.names = FALSE)
 
 
